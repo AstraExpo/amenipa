@@ -6,7 +6,25 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "check-types": "turbo run check-types",
+
+    "server:start": "pnpm --filter @amenipa/server start",
+    "server:start:debug": "pnpm --filter @amenipa/server start:debug",
+    "server:start:prod": "pnpm --filter @amenipa/server start:prod",
+    "server:test": "pnpm --filter @amenipa/server test",
+    "server:test:watch": "pnpm --filter @amenipa/server test:watch",
+    "server:test:cov": "pnpm --filter @amenipa/server test:cov",
+    "server:test:e2e": "pnpm --filter @amenipa/server test:e2e",
+    "server:migrate:dev": "pnpm --filter @amenipa/server migrate:dev",
+    "server:migrate:deploy": "pnpm --filter @amenipa/server migrate:deploy",
+    "server:migrate:reset": "pnpm --filter @amenipa/server migrate:reset",
+    "server:prisma:generate": "pnpm --filter @amenipa/server prisma:generate",
+    "server:prisma:studio": "pnpm --filter @amenipa/server prisma:studio",
+
+    "db:up": "sudo docker compose up -d",
+    "db:down": "sudo docker compose down",
+    "db:reset": "sudo docker compose down -v && docker compose up -d",
+    "db:logs": "sudo docker compose logs -f postgres"
   },
   "devDependencies": {
   "prettier": "^3.8.3",    
