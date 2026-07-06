@@ -1,10 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { Button } from "@/components/ui/button"
+import { Button } from '@/components/ui/button'
+import { createFileRoute } from '@tanstack/react-router'
 
-export const Route = createFileRoute("/")({ component: App })
+export const Route = createFileRoute('/_main/')({
+  component: RouteComponent,
+})
 
-function App() {
-  return (
+function RouteComponent() {
+    return (
     <div className="flex min-h-svh p-6">
       <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
         <div>
