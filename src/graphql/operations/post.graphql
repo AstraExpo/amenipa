@@ -1,0 +1,22 @@
+query GetPosts {
+  getPosts {
+    id
+    title
+    content
+    published
+    author {
+      id
+      email
+      name
+    }
+  }
+}
+
+mutation CreatePost($input: CreatePostInput!) {
+  createPost(input: $input) {
+    id
+    title
+    content
+    published
+  }
+}
